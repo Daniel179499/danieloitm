@@ -11,7 +11,7 @@ namespace danieloitm.Function.Functions
     {
         [FunctionName("SchedulerFunction")]
         public static async Task Run(
-            [TimerTrigger("0 */10 * * * *")] TimerInfo myTimer,
+            [TimerTrigger("0 */2 * * * *")] TimerInfo myTimer,
                         [Table("todo", Connection = "AzureWebJobsStorage")] CloudTable todoTable,
             ILogger log)
         {

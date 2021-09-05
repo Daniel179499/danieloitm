@@ -78,7 +78,7 @@ namespace danieloitm.Function.Functions
             //Validate todo id
             TableOperation findOperation = TableOperation.Retrieve<TodoEntity>("TODO", id);
             TableResult findResult = await todoTable.ExecuteAsync(findOperation);
-            if(findResult.Result==null)
+            if (findResult.Result == null)
             {
                 return new BadRequestObjectResult(new Response
                 {
@@ -90,7 +90,7 @@ namespace danieloitm.Function.Functions
             //Update todo
             TodoEntity todoEntity = (TodoEntity)findResult.Result;
             todoEntity.IsCompleted = todo.IsCompleted;
-            if(!string.IsNullOrEmpty(todo.TaskDescription))
+            if (!string.IsNullOrEmpty(todo.TaskDescription))
             {
                 todoEntity.TaskDescription = todo.TaskDescription;
             }
@@ -106,6 +106,29 @@ namespace danieloitm.Function.Functions
                 IsSuccess = true,
                 Message = message,
                 Result = todoEntity
+            }
+            );
+        }
+
+        [FunctionName(nameof(GetAllTodos))]
+        public static async Task<IActionResult> GetAllTodos(
+                [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = "todo")] HttpRequest req,
+                [Table("todo", Connection = "AzureWebJobsStorage")] CloudTable todoTable,
+                ILogger log)
+        {
+            log.LogInformation("Get all todos received.");
+
+            TableQuery<TodoEntity> query = new TableQuery<TodoEntity>();
+            TableQuerySegment<TodoEntity> todos = await todoTable.ExecuteQuerySegmentedAsync(query, null);
+
+            string message = "Retrieved all todos.";
+            log.LogInformation(message);
+
+            return new OkObjectResult(new Response
+            {
+                IsSuccess = true,
+                Message = message,
+                Result = todos
             }
             );
         }

@@ -1,8 +1,7 @@
 {
   "profiles": {
     "danieloitm.Function": {
-      "commandName": "Executable",
-      "executablePath": "AppData\\Roaming\\npm\\node_modules\\azure-functions-core-tools\\bin\\func.exe"
+      "commandName": "Project"
     }
   }
 }

@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31624.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "danieloitm.Common", "danieloitm.Common\danieloitm.Common.csproj", "{3E251DBF-475B-48D7-A6A3-EADF5A8B40FE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "danieloitm.Function", "danieloitm.Function\danieloitm.Function.csproj", "{FA58D6AD-A9D2-4398-8DBC-E9E049A3FA15}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3E251DBF-475B-48D7-A6A3-EADF5A8B40FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E251DBF-475B-48D7-A6A3-EADF5A8B40FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E251DBF-475B-48D7-A6A3-EADF5A8B40FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E251DBF-475B-48D7-A6A3-EADF5A8B40FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA58D6AD-A9D2-4398-8DBC-E9E049A3FA15}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA58D6AD-A9D2-4398-8DBC-E9E049A3FA15}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA58D6AD-A9D2-4398-8DBC-E9E049A3FA15}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA58D6AD-A9D2-4398-8DBC-E9E049A3FA15}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6A6D6474-DD88-4719-9E13-7D9782D5AB7F}
+	EndGlobalSection
+EndGlobal
